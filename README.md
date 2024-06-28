@@ -61,9 +61,11 @@ Dynamic volume provisioning in EKS allows Kubernetes to automatically create sto
   kubectl -n kube-system describe configmap aws-auth
 ```
 **from output check rolearn**
-``
-  rolearn: arn:aws:iam::180789647333:role/eksctl-eksdemo1-nodegroup-eksdemo-NodeInstanceRole-IJN07ZKXAWNN
-``
+
+  ```
+    rolearn: arn:aws:iam::180789647333:role/eksctl-eksdemo1-nodegroup-eksdemo-NodeInstanceRole-IJN07ZKXAWNN
+  ```
+  
   * Go to Services -> IAM -> Roles
   * Search for role with name eksctl-eksdemo1-nodegroup and open it
   * Click on Permissions tab
@@ -84,7 +86,7 @@ Dynamic volume provisioning in EKS allows Kubernetes to automatically create sto
    Define a StorageClass resource in your manifest. Specify the appropriate provisioner and other parameters.
  
   ```
-  link
+  https://github.com/praveensivakumar1998/Dynamic-Provisioning-Storage-in-EKS/blob/main/storageclass.yml
   ```
 
   ## Step: 5:
@@ -93,7 +95,7 @@ Dynamic volume provisioning in EKS allows Kubernetes to automatically create sto
   Define a PVC resource in your manifest. Reference the StorageClass created in the previous step and specify the volume type and size.
 
   ```
-  link
+  https://github.com/praveensivakumar1998/Dynamic-Provisioning-Storage-in-EKS/blob/main/persistentvolumeclaim.yml
   ```
   ## Step: 5:
   **Specify the PersistentVolumeClaim in Pod/Deployment Resources:**
@@ -101,7 +103,7 @@ Dynamic volume provisioning in EKS allows Kubernetes to automatically create sto
   Reference the PVC in your Pod or Deployment manifests to ensure the volumes are attached to the appropriate pods.
 
   ```
-  link
+  https://github.com/praveensivakumar1998/Dynamic-Provisioning-Storage-in-EKS/blob/main/nginx-deployment.yaml
   ```
 ---
 
