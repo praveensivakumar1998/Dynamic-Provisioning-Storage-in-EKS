@@ -107,7 +107,7 @@ Dynamic volume provisioning in EKS allows Kubernetes to automatically create sto
   ```
 ---
 
-**Important Note on volumeBindingMode: WaitForFirstConsumer:**
+Important Note on **volumeBindingMode: WaitForFirstConsumer:**
 
   ### Volume Binding Mode:
 
